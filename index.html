@@ -1,1 +1,142 @@
-Hello World
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name=author content="Richard Frnka">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name=description content="Dr. Richard Frnka: iOS Developer and Website Builder">
+    <title>Dr. Richard Frnka</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <link href="images/newRFLogo.png" rel="icon" type="image/png" />
+  <style>
+  body {
+    background-color: #9999AA
+  }
+
+.box {
+  background-color: #eeeeff;
+  box-shadow: 1px 1px 10px 10px rgba(10, 10, 10, 0.1);
+}
+article.notification {
+  box-shadow: 1px 1px 3px 3px rgba(10, 10, 10, 0.1);
+}
+  </style>
+  </head>
+<body>
+  <section class="section">
+<div class="tile is-ancestor is-horizontal box">
+  <div class="tile is-parent is-vertical is-3">
+
+  <div class="tile is-child" id="chart">
+  </div>
+  <div class="tile is-child" id="chart2">
+  </div>
+
+</div>
+<div class="tile is-parent is-9">
+    <div class="tile is-child" id="chart1">
+    </div>
+  </div>
+  
+
+
+</div>
+</section>
+  <script>
+  var options = {
+    chart: {
+      type: 'donut'
+    },
+    series: [15,20,15,20,5],
+    labels:
+     ['Tag U ', 'Fork2Fit', 'HomePilot', 'Golpher', 'Math Whiz'],
+    title: {
+                text: 'Development Work (by Project) ',
+                align: 'left',
+                floating: true
+            },
+            subtitle: {
+                text: '9/30 - 10/6',
+                align: 'left',
+                //floating: true
+            },
+  }
+
+  var chart = new ApexCharts(document.querySelector("#chart"), options);
+
+  chart.render();
+  </script>
+  <script>
+  var options = {
+            chart: {
+                type: 'area',
+            },
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+                curve: 'smooth'
+            },
+            series: [{
+                name: 'Development Work',
+                data: [30, 14, 25, 40, 36, 48, 46]
+            }, {
+                name: 'Administrative Work',
+                data: [20, 38, 22, 15, 20, 12, 15]
+            }],
+            title: {
+                        text: 'Weekly Breakdown of Work Hours',
+                        align: 'left',
+                        floating: true
+                    },
+                    subtitle: {
+                        text: 'Development vs Administrative',
+                        align: 'left',
+                        //floating: true
+                    },
+
+            xaxis: {
+                categories: ["8/26 - 9/1", "9/2 - 9/8", "9/9 - 9/15", "9/16 - 9/22", "9/23 - 9/29", "9/30 - 10/6", "10/7 - 10/13"],
+            },
+            tooltip: {
+                x: {
+                    format: 'MM/dd'
+                },
+            }
+        }
+
+        var chart = new ApexCharts(
+            document.querySelector("#chart1"),
+            options
+        );
+
+        chart.render();
+  </script>
+  <script>
+  var options = {
+    chart: {
+      type: 'donut'
+    },
+    series: [20,15,18,17,15],
+    labels:
+     ['Emails', 'Meetings', 'Proposal Writing', 'Accounting', 'Social Media'],
+    title: {
+                text: 'Administrative Work',
+                align: 'left',
+                floating: true
+            },
+            subtitle: {
+                text: '9/30 - 10/6',
+                align: 'left',
+                //floating: true
+            },
+  }
+
+  var chart = new ApexCharts(document.querySelector("#chart2"), options);
+
+  chart.render();
+  </script>
+</body>
+</html>
