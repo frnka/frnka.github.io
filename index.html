@@ -2,13 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name=author content="Richard Frnka">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name=description content="Dr. Richard Frnka: iOS Developer and Website Builder">
-    <title>Dr. Richard Frnka</title>
+    <title>Richard Frnka</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <link href="images/newRFLogo.png" rel="icon" type="image/png" />
   <style>
   body {
@@ -24,119 +21,82 @@ article.notification {
 }
   </style>
   </head>
-<body>
-  <section class="section">
-<div class="tile is-ancestor is-horizontal box">
-  <div class="tile is-parent is-vertical is-3">
+  <body>
 
-  <div class="tile is-child" id="chart">
-  </div>
-  <div class="tile is-child" id="chart2">
-  </div>
-
-</div>
-<div class="tile is-parent is-9">
-    <div class="tile is-child" id="chart1">
-    </div>
-  </div>
+    <nav class="navbar is-light has-shadow is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="#">
+                <!-- alt when image fails to load -->
+                <img src="images/newRFLogo.png" alt="avocado" width="28" height="28">
+            </a>
 
 
 
-</div>
-</section>
-  <script>
-  var options = {
-    chart: {
-      type: 'donut'
-    },
-    series: [15,20,15,20,5],
-    labels:
-     ['Tag U ', 'Fork2Fit', 'HomePilot', 'Golpher', 'Math Whiz'],
-    title: {
-                text: 'Development Work (by Project) ',
-                align: 'left',
-                floating: true
-            },
-            subtitle: {
-                text: '9/30 - 10/6',
-                align: 'left',
-                //floating: true
-            },
-  }
+        </div>
 
-  var chart = new ApexCharts(document.querySelector("#chart"), options);
+        <!-- remove is-active to hide auto menu on mobile -->
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <div class="navbar-item">
+                    <a class="navbar-item" href="http://www.richardfrnka.com">
+                        Richard Frnka
+                    </a>
 
-  chart.render();
-  </script>
-  <script>
-  var options = {
-            chart: {
-                type: 'area',
-            },
-            dataLabels: {
-                enabled: false
-            },
-            stroke: {
-                curve: 'smooth'
-            },
-            series: [{
-                name: 'Development Work',
-                data: [30, 14, 25, 40, 36, 48, 46]
-            }, {
-                name: 'Administrative Work',
-                data: [20, 38, 22, 15, 20, 12, 15]
-            }],
-            title: {
-                        text: 'Weekly Breakdown of Work Hours',
-                        align: 'left',
-                        floating: true
-                    },
-                    subtitle: {
-                        text: 'Development vs Administrative',
-                        align: 'left',
-                        //floating: true
-                    },
 
-            xaxis: {
-                categories: ["8/26 - 9/1", "9/2 - 9/8", "9/9 - 9/15", "9/16 - 9/22", "9/23 - 9/29", "9/30 - 10/6", "10/7 - 10/13"],
-            },
-            tooltip: {
-                x: {
-                    format: 'MM/dd'
-                },
-            }
-        }
+                </div>
+            </div>
 
-        var chart = new ApexCharts(
-            document.querySelector("#chart1"),
-            options
-        );
+            <div class="navbar-end">
 
-        chart.render();
-  </script>
-  <script>
-  var options = {
-    chart: {
-      type: 'donut'
-    },
-    series: [15,22,18,17,8],
-    labels:
-     ['Emails', 'Meetings', 'Proposal Writing', 'Accounting', 'Social Media'],
-    title: {
-                text: 'Administrative Work',
-                align: 'left',
-                floating: true
-            },
-            subtitle: {
-                text: '9/30 - 10/6',
-                align: 'left',
-                //floating: true
-            },
-  }
+                <div class="navbar-item is-right is-hoverable">
+                  <a class="navbar-item" href="http://www.cleversolve.com">
+                    <p>CleverSolve</p>
+                  </a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-  var chart = new ApexCharts(document.querySelector("#chart2"), options);
+    <section class="section" style="padding-top: 4em;">
+          <div class="columns is-desktop">
 
-  chart.render();
-  </script>
+            <div class="column">
+
+
+              <div class="card box is-shady">
+    						<a href="./charts.html">
+                  <!--
+                <div class="card-image is-one-half-desktop">
+
+                  <figure class="image is-1by1">
+                    <img src="images/newRFLogo.png" alt="Richard Frnka" >
+                  </figure>
+
+                </div>
+                    -->
+                <div class="card-content">
+                  <div class="content">
+    								<h2 class="title">First Example</h2>
+    								<h4 class="subtitle"> From codePEn for parallax effect</h4>
+    								<h6 class="subtitle">https://codepen.io/eehayman/pen/qdGZJr</h5>
+
+                  </div>
+                  </div>
+    							</a>
+                </div>
+
+              </div>
+
+
+
+
+    <!--is-full-mobile is-half-tablet is-one-third-desktop is-one-querter-widescreen-->
+
+
+
+          </div>
+
+        </section>
+
 </body>
 </html>
