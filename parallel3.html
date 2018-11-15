@@ -5,6 +5,61 @@
 <link href="css/parallel3.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <style>
+  @media screen and (min-width: 800px){
+.parent {
+  position: relative;
+  top: 0;
+  left: 0;
+  padding-bottom: 50%;
+  width: 100%;
+}
+.image1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+}
+.image2 {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  width: 15%;
+  height: auto;
+}
+.image3 {
+  position: absolute;
+  bottom: 0;
+  right: 13%;
+  width: 35%;
+}
+.image4 {
+  position: absolute;
+  bottom: 0;
+  left: 13%;
+  width: 35%;
+}
+.image5 {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 10%;
+}
+.image6 {
+  position: absolute;
+  bottom: 0;
+  left: 47%;
+  width: 6%;
+}
+.image7 {
+  position: absolute;
+  bottom: 0;
+  right: 12%;
+  width: 13%;
+}
+}
+</style>
 </head>
 <body style="background-color: #000000">
 
@@ -156,26 +211,74 @@
 </div>
 </div>
 
-<div class="content right">
-  <img style="float:left;margin-top:10px;margin-left:15px;width:322;height:250;" src="http://i1289.photobucket.com/albums/b506/katie_rogers6/5b0e7348c9c444bd97bb920627430b73_zpsc2f7924d.png?t=1397658857" alt="Mr and Mrs"/></a>
-  <h2>Another Content Block</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequens enim est et post oritur, ut dixi. Hoc ipsum elegantius poni meliusque potuit. Quo tandem modo? Sed plane dicit quod intellegit. Tibi hoc incredibile, quod beatissimum. Duo Reges: constructio interrete. Si quicquam extra virtutem habeatur in bonis. Quid enim? </p>
-  <p>Comprehensum, quod cognitum non habet? Sint ista Graecorum; Quantum Aristoxeni ingenium consumptum videmus in musicis? Sequitur disserendi ratio cognitioque naturae; </p>
-  <div style="clear:both;"></div>
-</div>
-<div class="parallax" id="trans3">
-  <div class="txt left">
-    and they lived...
-  </div>
-  <div style="clear:both;"></div>
-  <div class="txt left sub">
-    Happily Ever After
-  </div>
+<div class="content" style="height: 120%">
+  <div class="parent">
+      <img class="image1" src="images/Foundation.png"/>
+
+
+      <img class="image2" src="images/DigitalClock.png"
+      data-aos="fade-down"
+      data-aos-offset="12"
+      data-aos-delay="140"
+      data-aos-duration="2000"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="true"
+      data-aos-anchor-placement="top-center"
+      data-anchor-id="1"/>
+      <img class="image3" src="images/RightMonitor.png"
+      data-aos="fade-left"
+      data-aos-offset="12"
+      data-aos-delay="180"
+      data-aos-duration="2000"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="true"
+      data-aos-anchor="[data-anchor-id='1']"/>
+      <img class="image4" src="images/LeftMonitor.png"
+      data-aos="fade-right"
+      data-aos-offset="12"
+      data-aos-delay="200"
+      data-aos-duration="2000"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="true"
+      data-aos-anchor="[data-anchor-id='1']"/>
+      <img class="image5" src="images/iPad.png"
+      data-aos="flip-up"
+      data-aos-offset="12"
+      data-aos-delay="2000"
+      data-aos-duration="2000"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="true"
+        data-aos-anchor="[data-anchor-id='1']"/>
+      <img class="image6" src="images/iPHone.png"
+      data-aos="flip-up"
+      data-aos-offset="12"
+      data-aos-delay="2000"
+      data-aos-duration="2000"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="true"
+        data-aos-anchor="[data-anchor-id='1']" />
+      <img class="image7" src="images/iPadRotate.png"
+      data-aos="flip-up"
+      data-aos-offset="12"
+      data-aos-delay="2000"
+      data-aos-duration="2000"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="true"
+      data-aos-anchor="[data-anchor-id='1']" />
+
+
+    </div>
 </div>
 
 <div id="footer">
-   <p>Designed with Love and Care</p>
-  By:<a href="http://www.dreamdesigncreate2011.com">Katie Rogers</a></div>
+   <p>Designed on Hack Thursday.</p>
+  By:<a href="http://www.richardfrnka.com">Richard Frnka</a></div>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
        <script>AOS.init(); </script>
  </body>
