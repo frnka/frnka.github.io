@@ -5,10 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Richard Frnka</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
-    <link rel="stylesheet" type="text/css" href="css/parallax.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="images/newRFLogo.png" rel="icon" type="image/png" />
-  <style>
+
+
+<style>
+
 .box {
   background-color: #eeeeff;
   box-shadow: 1px 1px 10px 10px rgba(10, 10, 10, 0.1);
@@ -16,6 +23,141 @@
 article.notification {
   box-shadow: 1px 1px 3px 3px rgba(10, 10, 10, 0.1);
 }
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.black-bg {
+  background-color: #000000;
+  min-height: 100%;
+
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url('images/office.jpeg');
+    min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+    background-image: url("images/smallerDesk.png");
+    min-height: 100%;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+    background-image: url("images/watchMe.png");
+    min-height: 100%;
+}
+.wrapper {
+  /* The height needs to be set to a fixed value for the effect to work.
+   * 100vh is the full height of the viewport. */
+  height: 100vh;
+  /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
+  overflow-x: hidden;
+  /* Enable scrolling on the page. */
+  overflow-y: auto;
+  /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
+  perspective: 2px;
+}
+.parent {
+  position: relative;
+  top: 0;
+  left: 0;
+  padding-bottom: 40%;
+  width: 100%;
+}
+.image1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+}
+.image1:hover {
+  background-color: #ffffff;
+  box-shadow: none;
+}
+.image2 {
+  position: absolute;
+  top: 50px;
+  left: 5%;
+height: 80px;
+  width: auto;
+}
+.section1 {
+  /* Needed for children to be absolutely positioned relative to the parent. */
+  position: relative;
+  /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+  height: 100vh;
+
+  /* For text formatting. */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 0 0 5px #000;
+}
+
+.parallax::after {
+  /* Display and position the pseudo-element */
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  /* Move the pseudo-element back away from the camera,
+   * then scale it back up to fill the viewport.
+   * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+  transform: translateZ(-1px) scale(1.5);
+  /* Force the background image to fill the whole element. */
+  background-size: 100%;
+  /* Keep the image from overlapping sibling elements. */
+  z-index: -1;
+}
+
+/* The styling for the static div. */
+.static {
+  background: black;
+}
+
+/* Sets the actual background images to adorable kitties. This part is crucial. */
+.bg1::after {
+  background-image: url('images/smallerDesk.png');
+}
+
+.bg3::after {
+  background-image: url('images/fullSetup.png');
+}
+
+.bg4::after {
+  background-image: url('images/ipadAnalytics.png');
+}
+
+.bg2::after {
+  background-image: url('images/watchMe.png');
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+        min-height: 800px;
+    }
+}
+
   </style>
   </head>
   <body>
@@ -56,28 +198,104 @@ article.notification {
             </div>
         </div>
     </nav>
-    <script src="js/parallax.js"></script>
-    <section class="section" style="padding-top: 5em">
-    <div class="container">
-      <section class="background">
-        <div class="content-wrapper">
-          <p class="content-title">Full Page Parallax Effect</p>
-          <p class="content-subtitle">Scroll down and up to see the effect!</p>
-        </div>
-      </section>
-      <section class="background">
-        <div class="content-wrapper">
-          <p class="content-title">Cras lacinia non eros nec semper.</p>
-          <p class="content-subtitle">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras ut massa mattis nibh semper pretium.</p>
-        </div>
-      </section>
-      <section class="background">
-        <div class="content-wrapper">
-          <p class="content-title">Etiam consequat lectus.</p>
-          <p class="content-subtitle">Nullam tristique urna sed tellus ornare congue. Etiam vitae erat at nibh aliquam dapibus.</p>
-        </div>
-      </section>
+
+<main class="wrapper">
+  <section class="section1 parallax bg1">
+    <h1>First Page</h1>
+
+    <div class="w3-display-middle"
+    data-aos="slide-up"
+    data-aos-offset="100"
+    data-aos-delay="100"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-mirror="true"
+    data-aos-once="true"
+    data-aos-anchor-placement="top-center"
+    data-anchor-id="1">
+        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">CleverSolve</span>
     </div>
   </section>
+  <section class="section1 static">
+    <h1
+    data-aos="fade-down"
+    data-aos-offset="12"
+    data-aos-delay="300"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-mirror="true"
+    data-aos-once="true"
+    data-aos-anchor-placement="top-center"
+    data-anchor-id="2">
+    Second Page with some texts and an image</h1>
+  </section>
+  <section class="section1 parallax bg2">
+    <h1>Third Section. Think I'm getting it now.</h1>
+  </section>
+  <section class="section1 static">
+    <img class="image2" src="images/APPS.png"
+    data-aos="fade-down"
+    data-aos-offset="12"
+    data-aos-delay="300"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-mirror="true"
+    data-aos-once="true"
+    data-aos-anchor-placement="top-center"
+    data-anchor-id="1"/>
+    <h1>Fourth Page with some texts and an image</h1>
+  </section>
+  <section class="section1 parallax bg3">
+    <div class="parent">
+      <img class="image1" src="images/backScreen.png" style=""/>
+      <a href="http://ios.richardfrnka.com">
+      <img class="image2" src="images/APPS.png"
+      data-aos="fade-down"
+      data-aos-offset="12"
+      data-aos-delay="300"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="true"
+      data-aos-anchor-placement="top-center"
+      data-anchor-id="1"/>
+      </a>
+          <h1>5thSection. Think I'm getting it now.</h1>
+    </div>
+
+  </section>
+  <section class="section1 static">
+        <h1>Sixth Page with some texts and an image</h1>
+    <div class="parent">
+      <a href="http://ios.richardfrnka.com">
+      <article class="notification is-success"
+      data-aos="fade-down"
+      data-aos-offset="12"
+      data-aos-delay="300"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="true"
+      data-aos-anchor-placement="top-center"
+      data-anchor-id="1"/>
+      </a>
+
+    </div>
+
+  </section>
+  <section class="section1 parallax bg4">
+    <h1>Seventh Section. Think I'm getting it now.</h1>
+  </section>
+  <section class="section1 static">
+    <h1>Eighth Page with some texts and an image</h1>
+  </section>
+
+</main>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+     <script>AOS.init(); </script>
+
     </body>
+
+
+
     </html>
