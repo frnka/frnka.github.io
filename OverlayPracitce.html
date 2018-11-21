@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Overlay Effects</title>
+	<meta name="author" content="Richard Frnka">
+	<meta name="description" content="Richard Frnka: Playing with some overlay effects.">
+	<link href="images/newRFLogo.png" rel="icon" type="image/png" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" rel="stylesheet" />
+	<link href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" rel="stylesheet" />
+	<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+<head>
+<style>
+
+
+
+.container .title{
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 10px;
+}
+/*
+.content {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  overflow: hidden;
+}
+*/
+.content .content-overlay {
+  background: rgba(0,0,0,0.7);
+  position: absolute;
+  height: 99%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.content:hover .content-overlay{
+  opacity: 1;
+}
+
+.content-image{
+  width: 100%;
+}
+
+.content-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.content:hover .content-details{
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+.content-details h3{
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+.content-details p{
+  color: #fff;
+  font-size: 0.8em;
+}
+
+.fadeIn-bottom{
+  top: 80%;
+}
+
+.fadeIn-top{
+  top: 20%;
+}
+
+.fadeIn-left{
+  left: 20%;
+}
+
+.fadeIn-right{
+  left: 80%;
+}
+</style>
+</head>
+<body>
+
+	<nav class="navbar is-light has-shadow is-fixed-top" role="navigation" aria-label="main navigation">
+			<div class="navbar-brand">
+					<a class="navbar-item" href="#">
+							<!-- alt when image fails to load -->
+							<img src="images/newRFLogo.png" alt="avocado" width="28" height="28">
+					</a>
+
+
+
+			</div>
+
+			<!-- remove is-active to hide auto menu on mobile -->
+			<div class="navbar-menu">
+					<div class="navbar-start">
+							<div class="navbar-item">
+									<a class="navbar-item" href="https://frnka.github.io">
+											frnka.github.io
+									</a>
+
+
+							</div>
+					</div>
+
+					<div class="navbar-end">
+
+							<div class="navbar-item is-right is-hoverable">
+								<a class="navbar-item" href="http://www.richardfrnka.com">
+								Richard Frnka
+								</a>
+								<a class="navbar-item" href="http://www.cleversolve.com">
+									CleverSolve
+								</a>
+							</div>
+					</div>
+			</div>
+	</nav>
+	<section class="section" style="padding-top: 3em">
+		<div class="columns">
+			<div class="column">
+				<img src="images/MAD1.png"/>
+				<h1 class="title is-overlay" style="left: 10%; top: 30%">
+				Using the overlay class through bulma. Had to specify style (left and top)
+				</h1>
+				<h5 class="subtitle is-overlay" style="left: 10%; top: 40%">
+				Trying to place the subtitle under the title, overlain.
+				</h5>
+			</div>
+		</div>
+</section>
+
+<section class="section" style="padding-top: 3em">
+	<div class="columns">
+		<div class="column">
+			<img src="images/MAD1.png"/>
+			<article class="notification is-overlay">
+				<h1 class="title">
+				Trying to overlay an article over the image
+				</h1>
+				<h5 class="subtitle">
+				Not working
+				</h5>
+	</article>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="container has-text-centered" style="padding-bottom: 5em">
+	<h2 class="title"> Experimenting with some overlay effects. Should overlay on hover on desktop. </h2>
+	<a href="https://codepen.io/ArnaudBalland/pen/vGZKLr"><h5 class="subtitle"> Taken from this codepen </h5></a>
+</div>
+<div class="container">
+  <h3 class="title">First fade action</h3>
+  <div class="content">
+    <a href="#" target="_blank">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="images/WhitePieces.png">
+      <div class="content-details fadeIn-bottom">
+        <h3 class="content-title">This is a title</h3>
+        <p class="content-text">This is a short description</p>
+      </div>
+    </a>
+  </div>
+</div>
+<div class="container">
+  <h3 class="title">Text fadeIn bottom</h3>
+  <div class="content">
+    <a href="#" target="_blank">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="images/MAD1.png">
+      <div class="content-details fadeIn-right">
+        <h3 class="content-title">This is a title</h3>
+        <p class="content-text">This is a short description</p>
+      </div>
+    </a>
+  </div>
+</div>
+<div class="container">
+  <h3 class="title">Text fadeIn bottom</h3>
+  <div class="content">
+    <a href="#" target="_blank">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="images/MAD1.png">
+      <div class="content-details fadeIn-top fadeIn-left">
+        <h3 class="content-title">This is a title</h3>
+        <p class="content-text">This is a short description</p>
+      </div>
+    </a>
+  </div>
+</div>
+<div class="container">
+  <h3 class="title">Text fadeIn bottom</h3>
+  <div class="content">
+    <a href="#" target="_blank">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="images/watchSmaller.png">
+      <div class="content-details fadeIn-bottom fadeIn-right">
+        <h3 class="content-title">This is a title</h3>
+        <p class="content-text">This is a short description</p>
+      </div>
+    </a>
+  </div>
+</div>
+</body>
+</html>
