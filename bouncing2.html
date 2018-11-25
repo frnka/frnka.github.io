@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title> Bouncing Animation </title>
+</head>
+<style>
+#myCanvas {
+  border: 10px solid black;
+  height: 100vh;
+  width: 100vw;
+}
+
+
+
+
+#wrapper {
+    position: relative;
+    margin-right: 113px;
+}
+#ball {
+    height: 144px;
+    width: 113px;
+    position: absolute;
+    animation: animate 4s linear 0s infinite alternate;
+}
+@keyframes animate {
+    from { left: 100%; }
+    to { left: 0; }
+
+}
+</style>
+
+<body>
+  <div id="wrapper">
+    <img id="ball" src="images/richHead.png"></img>
+</div>
+
+</body>
+
+</html>
