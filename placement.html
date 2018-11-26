@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Static Sheet Site </title>
+<link rel="stylesheet" href="css/animations.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<style>
+body {
+background-color: #000000;
+}
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30pt;
+  color: #808080;
+
+
+}
+.nameDiv {
+  position: absolute;
+  right: 200px;
+  top: 10%;
+
+  text-align: center;
+  width: 300px;
+  height: 50px;
+}
+.vertical-menu {
+
+    position: absolute;
+    right: 200px;
+    top: 30%;
+
+    text-align: center;
+    width: 300px;
+    height: 70%;
+}
+
+.vertical-menu a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24pt;
+    background-color: black; /* Grey background color */
+    color: #808080; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc; /* Dark grey background on mouse-over */
+}
+
+.vertical-menu a.active {
+    background-color: #4CAF50; /* Add a green color to the "active/current" link */
+    color: white;
+}
+
+.parent {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+.img1 {
+  position: absolute;
+  top: 0;
+  left: 0
+  height: 60%;
+
+}
+.img2 {
+  position: absolute;
+  right: 0;
+
+}
+
+
+.image_off, #home:hover .image_on{
+   display:none
+}
+.image_on, #home:hover .image_off{
+   display:block
+}
+
+</style>
+</head>
+
+<body>
+<div class="parent">
+  <a id="home">
+  <img class="img1 image_on" src="images/NonFlatRichBW.png" />
+  <img class="img1 image_off" src="images/FlatRichardBW.png" />
+</a>
+  <img class="img2 hatch" src="images/DashPattern.png" />
+  <div class="nameDiv bigEntrance">
+    <h1> Richard Frnka </h1>
+  </div>
+  <div class="vertical-menu bigEntrance" >
+    <a href="http://frnka.github.io/index-18.html"> Design </a>
+      <a href="http://art.richardfrnka.com"> Art </a>
+        <a href="http://frnka.github.io"> Websites </a>
+          <a href="ios.richardfrnka.com"> iOS Apps </a>
+            <a href="frnka.github.io/index-18.html"> Design </a>
+              <a href="frnka.github.io/index-18.html"> News </a>
+  </div>
+
+</div>
+</body>
+</html>
