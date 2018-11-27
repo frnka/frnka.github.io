@@ -23,7 +23,7 @@ h1 {
 
   text-align: center;
   width: 300px;
-  height: 50px;
+
 }
 .vertical-menu {
 
@@ -42,21 +42,21 @@ h1 {
     background-color: black; /* Grey background color */
     color: #808080; /* Black text color */
     display: block; /* Make the links appear below each other */
-    padding: 12px; /* Add some padding */
+    padding: 5px 12px; /* Add some padding */
     text-decoration: none; /* Remove underline from links */
 }
 
 .vertical-menu a:hover {
-    background-color: #ccc; /* Dark grey background on mouse-over */
+    background-color: #ccc;
 }
 
 .vertical-menu a.active {
-    background-color: #4CAF50; /* Add a green color to the "active/current" link */
+    background-color: #4CAF50;
     color: white;
 }
 
 .parent {
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   height: 100vh;
@@ -68,6 +68,7 @@ h1 {
   left: 0
   height: 60%;
 
+
 }
 .img2 {
   position: absolute;
@@ -75,12 +76,68 @@ h1 {
 
 }
 
+.mobileImage {
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+}
+@media only screen and (max-width: 700px) {
+  .mobileImage {
+    position: relative;
+    visibility: visible;
+    display: block;
+    margin: auto;
+    width: 50%;
+  }
+  .img1 {
+    visibility: hidden;
+    display: none;
+  }
+  .img2 {
+    visibility: hidden;
+    display: none;
+  }
+  .nameDiv {
+    position: relative;
+    right: auto;
+    margin: 5px auto;
+    text-align: center;
+    width: 90%;
+    height: auto;
+    padding-top: 0px;
+    padding-bottom: 25px;
+  }
+  h1 {
+  font-size: 20pt;
+  }
+  .vertical-menu {
+    padding-top: 20px;
+    padding-bottom: 0px;
+    position: relative;
+    right: auto;
+    top: auto;
+    width: 80%;
+    margin: auto;
+    text-align: center;
 
+  }
+  .vertical-menu a {
+
+      font-size: 16pt;
+      background-color: black; /* Grey background color */
+      color: #808080; /* Black text color */
+      display: block; /* Make the links appear below each other */
+      padding: 3px 12px; /* Add some padding */
+      text-decoration: none; /* Remove underline from links */
+  }
+}
 .image_off, #home:hover .image_on{
-   display:none
+   display:none;
+
 }
 .image_on, #home:hover .image_off{
-   display:block
+   display:block;
+
 }
 
 </style>
@@ -89,22 +146,31 @@ h1 {
 <body>
 <div class="parent">
   <a id="home">
-  <img class="img1 image_on" src="images/NonFlatRichBW.png" />
-  <img class="img1 image_off" src="images/FlatRichardBW.png" />
+    <img class="mobileImage tossing" src="images/richHead.png"/>
+  <img class="img1 image_on" src="images/NonFlatRichBW.png"/>
+  <img class="img1 image_off"  src="images/FlatRichardBW.png"/>
 </a>
   <img class="img2 hatch" src="images/DashPattern.png" />
   <div class="nameDiv bigEntrance">
     <h1> Richard Frnka </h1>
   </div>
   <div class="vertical-menu bigEntrance" >
+      <a href="http://ios.richardfrnka.com"> iOS Apps </a>
     <a href="http://frnka.github.io/index-18.html"> Design </a>
       <a href="http://art.richardfrnka.com"> Art </a>
         <a href="http://frnka.github.io"> Websites </a>
-          <a href="ios.richardfrnka.com"> iOS Apps </a>
-            <a href="frnka.github.io/index-18.html"> Design </a>
-              <a href="frnka.github.io/index-18.html"> News </a>
+          <a href="#"> Mathematics </a>
+              <a href="#"> News </a>
   </div>
 
 </div>
+<script type="text/javascript">
+<!--
+if (screen.width <= 699) {
+document.location = "./mobile.html";
+}
+//-->
+</script>
+
 </body>
 </html>
