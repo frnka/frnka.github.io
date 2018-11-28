@@ -3,10 +3,103 @@
 
 <head>
 <title>Static Sheet Site </title>
+<meta name="author" content="Richard Frnka">
+<meta name="description" content="Richard Frnka: Some interesting web examples.">
 <link rel="stylesheet" href="css/animations.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+
+<style>
+  body {
+  background-color: #000000;
+  }
+  h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20pt;
+    color: #808080;
+  }
+  .mobileImage {
+
+
+    top: 0;
+    display: block;
+    margin: auto;
+    width: 50%;
+    padding: 0px;
+  }
+  .img1 {
+    visibility: hidden;
+    display: none;
+  }
+  .img2 {
+    visibility: hidden;
+    display: none;
+  }
+  .nameDiv {
+    position: absolute;
+    top: 45%;
+    margin: auto;
+    text-align: center;
+    width: 90%;
+    height: auto;
+
+  }
+
+  .vertical-menu {
+    padding-top: 20px;
+    padding-bottom: 0px;
+
+    
+    width: 80%;
+    margin: auto;
+
+    text-align: center;
+
+  }
+  .vertical-menu a {
+    font-family: 'Roboto', sans-serif;
+
+      font-size: 18pt;
+      background-color: black; /* Grey background color */
+      color: #808080; /* Black text color */
+      display: block; /* Make the links appear below each other */
+      padding: 3px 12px; /* Add some padding */
+      text-decoration: none; /* Remove underline from links */
+  }
+
+  .vertical-menu a:hover {
+      background-color: #ccc;
+  }
+
+  .vertical-menu a.active {
+      background-color: #4CAF50;
+      color: white;
+  }
+  </style>
 </head>
+
 <body>
-  <h1> Richard Frnka </h1>
-  </body>
-  </html>
+<div class="container" style="background-color: black">
+
+  <a id="home">
+    <img class="mobileImage tossing" src="images/richHead.png"/>
+</a>
+
+</div>
+  <div class="container bigEntrance has-text-centered" style="background-color: black">
+    <h1> Richard Frnka </h1>
+  </div>
+  <div class="vertical-menu bigEntrance" >
+      <a href="http://ios.richardfrnka.com"> iOS Apps </a>
+    <a href="http://frnka.github.io/index-18.html"> Design </a>
+      <a href="http://art.richardfrnka.com"> Art </a>
+        <a href="http://frnka.github.io"> Websites </a>
+          <a href="#"> Mathematics </a>
+              <a href="#"> News </a>
+  </div>
+
+
+
+</body>
+</html>
