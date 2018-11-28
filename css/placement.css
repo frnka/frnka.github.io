@@ -85,7 +85,7 @@ h1 {
     width: 100vw;
   }
   .mobileImage {
-    position: relative;
+    position: absolute;
     visibility: visible;
     top: 0;
     left: 20%;
