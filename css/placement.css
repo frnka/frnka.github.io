@@ -88,9 +88,10 @@ h1 {
     position: relative;
     visibility: visible;
     top: 0;
+    left: 20%;
     display: block;
     margin: auto;
-    width: 50%;
+    width: 60%;
     padding: 0px;
   }
   .img1 {
