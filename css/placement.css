@@ -85,10 +85,9 @@ h1 {
     width: 100vw;
   }
   .mobileImage {
-    position: absolute;
+    position: relative;
     visibility: visible;
-    top: 0;
-    left: 20%;
+
     display: block;
     margin: auto;
     width: 60%;
@@ -103,14 +102,14 @@ h1 {
     display: none;
   }
   .nameDiv {
-    position: absolute;
-    right: auto;
+    position: relative;
+
     margin: 5px auto;
     text-align: center;
     width: 90%;
-    left: 5%;
+
     height: auto;
-    top: 45%;
+
   }
   h1 {
   font-size: 20pt;
@@ -118,11 +117,11 @@ h1 {
   .vertical-menu {
     padding-top: 20px;
     padding-bottom: 0px;
-    position: absolute;
-    top: 55%;
+    position: relative;
+
     width: 80%;
     margin: auto;
-    left: 10%;
+  
     text-align: center;
 
   }
