@@ -87,10 +87,10 @@ h1 {
   .mobileImage {
     position: absolute;
     visibility: visible;
-top: 0;
+    top: 0;
     display: block;
     margin: auto;
-    width: 60%;
+    width: 50%;
     padding: 0px;
   }
   .img1 {
@@ -103,11 +103,10 @@ top: 0;
   }
   .nameDiv {
     position: absolute;
-    top: 45%;
+    top: 45vh;
     margin: 5px auto;
     text-align: center;
     width: 90%;
-
     height: auto;
 
   }
